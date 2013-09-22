@@ -1,0 +1,123 @@
+# Copyright (C) 2013 Labs64
+# This file is distributed under the same license as the Credit_Tracker package.
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.9.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/credit-tracker\n"
+"POT-Creation-Date: 2013-09-22 10:26+0100\n"
+"PO-Revision-Date: 2013-09-22 10:27+0100\n"
+"Last-Translator: Labs64 <info@labs64.com>\n"
+"Language-Team: Labs64 <info@labs64.com >\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;esc_html_e;esc_html__;esc_attr_e;"
+"esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Language: en_US\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: credit-tracker-class.php:192 credit-tracker-shortcodes.php:39
+msgid "Ident-Nr."
+msgstr ""
+
+#: credit-tracker-class.php:195
+msgid "The original object number at the source"
+msgstr ""
+
+#: credit-tracker-class.php:199
+msgid "Source"
+msgstr ""
+
+#: credit-tracker-class.php:202
+msgid "Source where to locate the original"
+msgstr ""
+
+#: credit-tracker-class.php:206 credit-tracker-class.php:266
+#: credit-tracker-shortcodes.php:40
+msgid "Author"
+msgstr ""
+
+#: credit-tracker-class.php:209
+msgid "Media author/owner"
+msgstr ""
+
+#: credit-tracker-class.php:213 credit-tracker-class.php:267
+#: credit-tracker-shortcodes.php:41
+msgid "Publisher"
+msgstr "Publisher"
+
+#: credit-tracker-class.php:216
+msgid "Media publisher (e.g. image agency)"
+msgstr ""
+
+#: credit-tracker-class.php:220 credit-tracker-shortcodes.php:43
+msgid "License"
+msgstr ""
+
+#: credit-tracker-class.php:223
+msgid "Media license"
+msgstr ""
+
+#: credit-tracker-shortcodes.php:42
+msgid "Copyright"
+msgstr "Copyright"
+
+#: credit-tracker-shortcodes.php:47
+msgid "No images found"
+msgstr ""
+
+#: options.php:37
+msgid "Settings"
+msgstr ""
+
+#: options.php:50 options.php:51
+msgid "Credit Tracker"
+msgstr ""
+
+#: options.php:107
+msgid "Credit Tracker by Labs64"
+msgstr ""
+
+#: options.php:118
+msgid "Feedback"
+msgstr ""
+
+#: options.php:120
+msgid ""
+"Did you find a bug? Have an idea for a plugin? Please help us improve this "
+"plugin"
+msgstr ""
+
+#: options.php:125
+msgid "Report a bug, or suggest an improvement"
+msgstr ""
+
+#: options.php:127
+msgid "Like us on Facebook"
+msgstr ""
+
+#: options.php:129
+msgid "Read Labs64 Blog"
+msgstr ""
+
+#: options.php:148
+msgid "Credit Tracker Settings"
+msgstr ""
+
+#: options.php:169
+msgid "Copyright format"
+msgstr "Copyright format"
+
+#: options.php:175
+msgid ""
+"%ident_nr%, %source%, %author%, %publisher%, %license% can be used as "
+"placeholders"
+msgstr ""
+
+#: options.php:208
+msgid "Enter your settings below:"
+msgstr ""
