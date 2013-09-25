@@ -1,15 +1,17 @@
 === Plugin Name ===
 Contributors: labs64
-Tags: credit, credits, legal, copyright, owner, author, media library, media, image, attachment, custom fields, fotolia, bildnachweis
+Tags: credit, credits, legal, copyright, owner, author, media library, media, image, royalty-free, RF, stock, attachment, custom fields, fotolia, bildnachweis, impressum, imprint
 Requires at least: 3.5.1
 Tested up to: 3.6.1
-Stable tag: 0.9.0
+Stable tag: 0.9.1
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 A simple way to show credits for the images used on your website.
 
 == Description ==
+
+The effective use of stock images and photography on your website and blog can have a massive impact on the legal requirements regarding proper credit of the author.
 
 Credit Tracker plugin allows to create media credits tables and adds a few additional fields not provided by Media Library. Media credits data can be fetched from different image agencies and shown in required format.
 
@@ -49,6 +51,9 @@ The plugin adds the following fields to all images in WordPress Media Library:
 3. Shortcode 'credit_tracker_table'
 
 == Changelog ==
+
+= 0.9.1 =
+* Add reference section
 
 = 0.9.0 =
 * Initial version
