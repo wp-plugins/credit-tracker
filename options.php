@@ -177,6 +177,9 @@ function print_reference_section()
                     display. Valid values include "thumbnail", "medium", "large", "full". The default value is
                     "thumbnail".</p>
 
+                <p>&nbsp;&nbsp;<strong>style</strong> <i>(optional)</i> - specify the table CSS style. Valid values
+                    include "default", "mercury", "mars". The default value is "default".</p>
+
                 <p><strong>Examples:</strong></p>
 
                 <p><code>[credit_tracker_table]</code></p>
@@ -184,9 +187,10 @@ function print_reference_section()
                 <p>Generate table for all images with non-empty attribute 'author' and small (thumbnail) preview
                     image</p>
 
-                <p><code>[credit_tracker_table id="11,22,33" size="medium"]</code></p>
+                <p><code>[credit_tracker_table id="11,22,33" size="medium" style="mercury"]</code></p>
 
-                <p>Generate table for with image ids (11, 22 and 33) and medium preview image</p>
+                <p>Generate table for with image ids (11, 22 and 33) and medium preview image. Table will be styled with
+                    "mercury" CSS style</p>
             </td>
         </tr>
         </tbody>
@@ -234,7 +238,20 @@ function page_init()
         'CT_COMMON_SETTINGS',
         array(
             'id' => 'ct_copyright_format',
-            'description' => __('%ident_nr%, %source%, %author%, %publisher%, %license% can be used as placeholders', CT_SLUG),
+            'description' => __('Default copyright format<br/>Allowed placeholders: %ident_nr%, %source%, %author%, %publisher%, %license%', CT_SLUG),
+        )
+    );
+
+    add_settings_field(
+        'ct_override_caption_shortcode',
+        __('Override shortcodes', CT_SLUG),
+        'ct_checkbox_field_callback',
+        CT_SLUG,
+        'CT_COMMON_SETTINGS',
+        array(
+            'id' => 'ct_override_caption_shortcode',
+            'caption' => __('Override WordPress [caption] shortcode', CT_SLUG),
+            'description' => __('Replaces output of standard WordPress [caption] shortcode with improved version (add Image Microdata and Image Credit)', CT_SLUG),
         )
     );
 }
@@ -273,6 +290,16 @@ function ct_text_field_callback($args)
     echo "<p class='description'>$description</p>";
 }
 
+function ct_checkbox_field_callback($args)
+{
+    $id = $args['id'];
+    $caption = $args['caption'];
+    $description = $args['description'];
+    $value = get_single_option($id);
+    echo "<input type='checkbox' id='$id' name='CT_OPTIONS[$id]' value='1' class='code' " . checked(1, $value, false) . " /> $caption";
+    echo "<p class='description'>$description</p>";
+}
+
 /**
  * Returns default options.
  * If you override the options here, be careful to use escape characters!
@@ -280,7 +307,8 @@ function ct_text_field_callback($args)
 function get_default_options()
 {
     $default_options = array(
-        'ct_copyright_format' => '&copy; %author%'
+        'ct_copyright_format' => '&copy; %author%',
+        'ct_override_caption_shortcode' => '0'
     );
     return $default_options;
 }
@@ -314,27 +342,13 @@ function get_single_option($name)
  */
 function ct_get_sources_array()
 {
-    $sources = Array(
-        'Custom' => 'custom',
+    $sources = array(
+        'custom' => __('Custom', CT_SLUG),
         'Fotolia' => 'Fotolia',
         'iStockphoto' => 'iStockphoto',
         'Shutterstock' => 'Shutterstock',
-        'Corbis Images' => 'Corbis_Images',
-        '123RF' => '123RF',
-        'Alamy' => 'Alamy',
-        'BigStock' => 'BigStock',
-        'Can Stock Photo' => 'Can_Stock_Photo',
-        'Depositphotos' => 'Depositphotos',
-        'Foap' => 'Foap',
-        'FotoSearch' => 'FotoSearch',
-        'iStock' => 'iStock',
-        'Photos.com' => 'Photos.com',
-        'ThinkStock' => 'ThinkStock',
-        'CartoonStock' => 'CartoonStock',
-        'Veer.com' => 'Veer.com',
-        'Graphic Leftovers' => 'Graphic_Leftovers',
-        'Illustration Web' => 'Illustration_Web',
-        'Getty Images' => 'Getty_Images'
+        'Corbis_Images' => 'Corbis Images',
+        'Getty_Images' => 'Getty Images'
     );
     return $sources;
 }
