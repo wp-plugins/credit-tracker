@@ -40,6 +40,9 @@ class Credit_Tracker
 
         add_filter('manage_media_columns', array($this, 'credit_tracker_attachment_columns'), null, 2);
         add_action('manage_media_custom_column', array($this, 'credit_tracker_attachment_show_column'), null, 2);
+
+        add_action('admin_footer', array($this, 'get_media_data_javascript'));
+        add_action('admin_footer', array($this, 'get_media_data_style'));
     }
 
     /**
@@ -175,7 +178,7 @@ class Credit_Tracker
      */
     public function enqueue_styles()
     {
-        wp_enqueue_style(CT_SLUG . '-plugin-styles', plugins_url('css/public.css', __FILE__), array(), CT_VERSION);
+        wp_enqueue_style(CT_SLUG . '-plugin-styles', plugins_url('css/ct-public.css', __FILE__), array(), CT_VERSION);
     }
 
     /**
@@ -183,11 +186,14 @@ class Credit_Tracker
      */
     public function enqueue_scripts()
     {
-        wp_enqueue_script(CT_SLUG . '-plugin-script', plugins_url('js/public.js', __FILE__), array('jquery'), CT_VERSION);
+        wp_enqueue_script(CT_SLUG . '-plugin-script', plugins_url('js/ct-public.js', __FILE__), array('jquery'), CT_VERSION);
     }
 
     public function get_attachment_fields($form_fields, $post)
     {
+        $selected_source = get_post_meta($post->ID, "credit-tracker-source", true);
+        $ct_retriever_enabled = get_single_option('ct_feature_retriever');
+
         $form_fields["credit-tracker-ident_nr"] = array(
             "label" => __('Ident-Nr . ', CT_SLUG),
             "input" => "text",
@@ -195,13 +201,19 @@ class Credit_Tracker
             "helps" => __("The original object number at the source", CT_SLUG),
         );
 
-        $selected_source = get_post_meta($post->ID, "credit-tracker-source", true);
+        if ($ct_retriever_enabled == '1') {
+            $btn_state = '';
+            $link_activate = "";
+        } else {
+            $btn_state = 'disabled';
+            $link_activate = "<a href='" . admin_url('options-general.php?page=credit-tracker') . "'>" . __("activate", CT_SLUG) . "</a>";
+        }
 
         $form_fields["credit-tracker-source"] = array(
             "label" => __('Source', CT_SLUG),
             "input" => "html",
             "value" => $selected_source,
-            "html" => "<select name='attachments[$post->ID][credit-tracker-source]' id='attachments-{$post->ID}-credit-tracker-source'>" . get_combobox_options(ct_get_sources_array(), $selected_source) . "</select>",
+            "html" => "<select name='attachments[$post->ID][credit-tracker-source]' id='attachments-{$post->ID}-credit-tracker-source'>" . get_combobox_options(ct_get_sources_names_array(), $selected_source) . "</select>&nbsp;&nbsp;<button id='mediadata' type='button' " . $btn_state . ">" . __("GET MEDIA DATA", CT_SLUG) . "</button>" . "&nbsp;" . $link_activate,
             "helps" => __("Source where to locate the original media", CT_SLUG),
         );
 
@@ -284,6 +296,39 @@ class Credit_Tracker
                 echo $value;
                 break;
         }
+    }
+
+    function get_media_data_javascript()
+    {
+        ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $("#mediadata").click(function () {
+                    var data = {
+                        action: 'get_media_data',
+                        source: $("[id$=credit-tracker-source]").val(),
+                        ident_nr: $("[id$=credit-tracker-ident_nr]").val()
+                    };
+
+                    $.post(ajaxurl, data, function (response) {
+                        // alert('Got this from the server: ' + response);
+                        var mediadata = jQuery.parseJSON(response);
+                        $("[id$=credit-tracker-author]").val(mediadata.author);
+                        $("[id$=credit-tracker-publisher]").val(mediadata.publisher);
+                        $("[id$=credit-tracker-license]").val(mediadata.license);
+                    });
+                });
+            });
+        </script>
+    <?php
+    }
+
+    function get_media_data_style()
+    {
+        ?>
+        <style type="text/css">
+        </style>
+    <?php
     }
 
 }
