@@ -3,10 +3,10 @@
  * @wordpress-plugin
  * Plugin Name: Credit Tracker
  * Plugin URI:  https://github.com/Labs64/credit-tracker
- * Description: Fetch (from image agencies) & process credits for the different WordPress entities.
+ * Description: A simple way to show credits for the images used on your website.
  * Author:      Labs64
  * Author URI:  http://www.labs64.com
- * Version:     0.9.3
+ * Version:     0.9.4
  * Text Domain: credit-tracker
  * Domain Path: /languages
  * License:     GPL-2.0+
@@ -30,7 +30,7 @@ if (!defined('WPINC')) {
 /**
  * Plugin version, used for cache-busting of style and script file references.
  */
-define('CT_VERSION', '0.9.3');
+define('CT_VERSION', '0.9.4');
 
 /**
  * Unique identifier for your plugin.
@@ -45,6 +45,10 @@ require_once(plugin_dir_path(__FILE__) . 'credit-tracker-class.php');
 require_once(plugin_dir_path(__FILE__) . 'credit-tracker-shortcodes.php');
 require_once(plugin_dir_path(__FILE__) . 'credit-tracker-functions.php');
 require_once(plugin_dir_path(__FILE__) . 'options.php');
+
+require_once(plugin_dir_path(__FILE__) . '/php/netlicensing/netlicensing.php');
+require_once(plugin_dir_path(__FILE__) . '/php/curl/curl.php');
+require_once(plugin_dir_path(__FILE__) . '/php/curl/curl_response.php');
 
 // Register hooks that are fired when the plugin is activated, deactivated, and uninstalled, respectively.
 register_activation_hook(__FILE__, array('Credit_Tracker', 'activate'));
