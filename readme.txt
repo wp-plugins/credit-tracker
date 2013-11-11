@@ -3,7 +3,7 @@ Contributors: labs64
 Tags: plugin, shortcode, credit, credits, attribution, legal, copyright, owner, author, media library, media, image, images, photo, photos, license, royalty-free, RF, Creative Commons, CC, stock, attachment, custom fields, fotolia, bildnachweis, impressum, imprint, microdata, NetLicensing
 Requires at least: 3.5.1
 Tested up to: 3.6.1
-Stable tag: 0.9.4
+Stable tag: 0.9.5
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,6 @@ The Credit Tracker plugin allows you to create Media Credits Tables, meaning you
 The Plugin is designed to be easy-to-use and to fit easily and neatly within the current design of your website with fully customisable colours, fonts and styles. For the more confident designer you can also override the standard Wordpress Shortcode.
 
 This plugin adds the following fields to all images in WordPress Media Library:
-
 * Ident-Nr.
 * Source
 * Owner/Author
@@ -126,6 +125,9 @@ Yes you can! Join in on our [GitHub repository](https://github.com/Labs64/credit
 
 == Changelog ==
 
+= 0.9.5 =
+* Fix reset validation after plugin option save
+
 = 0.9.4 =
 * Activated plugin features box
 * Add 'Get Media Data' button at media library
@@ -157,7 +159,5 @@ Listed here are credits and special thanks to some of you who have helped us out
 
 = Translations =
 * English - default, always included
-* German - credit goes to [Alexey Averikhin](http://www.labs64.de)
-* Russian - credit goes to [Konstantin Korotkov](http://netlicensing.labs64.com)
 
 *NOTE:* Please [contribute](https://github.com/Labs64/credit-tracker/tree/master/languages "contribute your language") your language to the plugin to make it even more useful.
