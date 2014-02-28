@@ -2,8 +2,8 @@
 Contributors: labs64
 Tags: credit, attribution, legal, copyright, owner, author, media library, media, image, photo, license, royalty-free, RF, Creative Commons, stock, attachment, fotolia, bildnachweis, impressum, imprint, microdata, NetLicensing
 Requires at least: 3.5.1
-Tested up to: 3.8
-Stable tag: 0.9.9
+Tested up to: 3.8.1
+Stable tag: 0.9.10
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,10 @@ This plugin adds the following fields to all images in WordPress Media Library:
 * Fully customisable to look just like your own website's style: customise the colours, styles and fonts
 * Ability to override standard WordPress shortcode [caption]
 * Add microdata to the images
+
+= Showcase =
+
+* [Media Credits page at labs64.com](http://www.labs64.com/legal/media-credits/ "Media Credits")
 
 = Get Involved =
 
@@ -126,6 +130,9 @@ Yes you can! Join in on our [GitHub repository](https://github.com/Labs64/credit
 
 == Changelog ==
 
+= 0.9.10 =
+* French translation by Lilian Ricaud
+
 = 0.9.9 =
 * Enable Pixelio
 
@@ -173,5 +180,6 @@ Listed here are credits and special thanks to some of you who have helped us out
 
 = Translations =
 * English - default, always included
+* French - by [Lilian Ricaud](http://www.lilianricaud.com "Lilian Ricaud")
 
 *NOTE:* Please [contribute](https://github.com/Labs64/credit-tracker/tree/master/languages "contribute your language") your language to the plugin to make it even more useful.
