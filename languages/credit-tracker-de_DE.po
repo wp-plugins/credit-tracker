@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the Credit_Tracker package.
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.9.6\n"
+"Project-Id-Version: 0.9.11\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/credit-tracker\n"
-"POT-Creation-Date: 2014-02-16 08:20+0100\n"
-"PO-Revision-Date: 2014-02-16 08:20+0100\n"
+"POT-Creation-Date: 2014-03-25 22:39+0100\n"
+"PO-Revision-Date: 2014-03-25 22:40+0100\n"
 "Last-Translator: Labs64 <info@labs64.com>\n"
 "Language-Team: Labs64 <info@labs64.com >\n"
 "Language: de_DE\n"
@@ -23,147 +23,153 @@ msgstr ""
 #: credit-tracker-class.php:198 credit-tracker-class.php:281
 #: credit-tracker-shortcodes.php:39
 msgid "Ident-Nr."
-msgstr ""
+msgstr "Id-Nr."
 
 #: credit-tracker-class.php:201
 msgid "The original object number at the source"
-msgstr ""
+msgstr "Original Objekt-Nummer"
 
 #: credit-tracker-class.php:209
 msgid "activate"
-msgstr ""
+msgstr "aktivieren"
 
 #: credit-tracker-class.php:213 credit-tracker-class.php:282
 msgid "Source"
-msgstr ""
+msgstr "Quelle"
 
 #: credit-tracker-class.php:216
 msgid "GET MEDIA DATA"
-msgstr ""
+msgstr "MEDIADATEN HOLEN"
 
 #: credit-tracker-class.php:217
 msgid "Source where to locate the original media"
-msgstr ""
+msgstr "Quelle der originalen Medien-Datei"
 
 #: credit-tracker-class.php:221 credit-tracker-class.php:283
 #: credit-tracker-shortcodes.php:40
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: credit-tracker-class.php:224
 msgid "Media author/owner"
-msgstr ""
+msgstr "Medien-Autor/Eigentümer"
 
 #: credit-tracker-class.php:228 credit-tracker-shortcodes.php:41
 msgid "Publisher"
-msgstr ""
+msgstr "Verleger"
 
 #: credit-tracker-class.php:231
 msgid "Media publisher (e.g. image agency)"
-msgstr ""
+msgstr "Medium-Herausgeber ( z.B. Bilder-Agentur )"
 
 #: credit-tracker-class.php:235 credit-tracker-shortcodes.php:43
 msgid "License"
-msgstr ""
+msgstr "Lizenz"
 
 #: credit-tracker-class.php:238
 msgid "Media license"
-msgstr ""
+msgstr "Medien-Lizenz"
 
 #: credit-tracker-shortcodes.php:42
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: credit-tracker-shortcodes.php:47
 msgid "No images found"
-msgstr ""
+msgstr "keine Bilder gefunden"
 
 #: options.php:42
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: options.php:55 options.php:56
 msgid "Credit Tracker"
-msgstr ""
+msgstr "Credit Tracker"
 
 #: options.php:112
 msgid "Credit Tracker by Labs64"
-msgstr ""
+msgstr "Credit Tracker by Labs64"
 
 #: options.php:165
 msgid "Enter your settings below:"
-msgstr ""
+msgstr "Geben Sie Ihre Einstellungen unten ein:"
 
 #: options.php:174
 msgid "Image data retriever (Free)"
-msgstr ""
+msgstr "Image data retriever (Frei)"
 
 #: options.php:200
 msgid "Features"
-msgstr ""
+msgstr "Merkmale"
 
 #: options.php:201
 msgid "Available plugin features"
-msgstr ""
+msgstr "Verfügbare Plugin Merkmale"
 
 #: options.php:205
 msgid "Validate"
-msgstr ""
+msgstr "Validieren"
 
 #: options.php:220
 msgid "Feedback"
-msgstr ""
+msgstr "Feedback"
 
 #: options.php:222
 msgid ""
 "Did you find a bug? Have an idea for a plugin? Please help us improve this "
 "plugin"
 msgstr ""
+"Haben Sie einen Fehler gefunden, oder eine Idee für ein Plugin? Helfen Sie "
+"uns bitte bei der Verbesserung."
 
 #: options.php:226
 msgid "Report a bug, or suggest an improvement"
-msgstr ""
+msgstr "Melden Sie einen Fehler, oder schlagen Sie eine Verbesserung vor"
 
 #: options.php:228
 msgid "Like us on Facebook"
-msgstr ""
+msgstr "Empfehle uns auf Facebook"
 
 #: options.php:230
 msgid "Read Labs64 Blog"
-msgstr ""
+msgstr "Labs64 Blog lesen"
 
 #: options.php:241
 msgid "Shortcodes Reference"
-msgstr ""
+msgstr "Shortcodes Referenz"
 
 #: options.php:294
 msgid "Credit Tracker Settings"
-msgstr ""
+msgstr "Credit Tracker Einstellungen"
 
 #: options.php:301
 msgid "Copyright format"
-msgstr ""
+msgstr "Copyright Format"
 
 #: options.php:307
 msgid ""
 "Default copyright format<br/>Allowed placeholders: %ident_nr%, %source%, "
 "%author%, %publisher%, %license%"
 msgstr ""
+"Standard Urheber Format <br/>Erlaubte Platzhalter: %ident_nr%, %source%, "
+"%author%, %publisher%, %license%"
 
 #: options.php:313
 msgid "Override shortcodes"
-msgstr ""
+msgstr "Shortcodes überladen"
 
 #: options.php:319
 msgid "Override WordPress [caption] shortcode"
-msgstr ""
+msgstr "WordPress Shortcode [caption] überladen"
 
 #: options.php:320
 msgid ""
 "Replaces output of standard WordPress [caption] shortcode with improved "
 "version (add Image Microdata and Image Credit)"
 msgstr ""
+"Ersetzt Ausgabe von standard WordPress Shortcode [caption] mit verbesserter "
+"Version (Bild Microdata und Urheberinfo)"
 
 #: options.php:513
 msgid "Custom"
-msgstr ""
+msgstr "Benutzerdefiniert"
