@@ -2,8 +2,8 @@
 Contributors: labs64
 Tags: credit, attribution, legal, copyright, owner, author, media library, media, image, photo, license, royalty-free, RF, Creative Commons, stock, attachment, fotolia, bildnachweis, impressum, imprint, microdata, NetLicensing
 Requires at least: 3.5.1
-Tested up to: 3.8.1
-Stable tag: 0.9.11
+Tested up to: 3.8.3
+Stable tag: 0.9.12
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -129,6 +129,10 @@ Yes you can! Join in on our [GitHub repository](https://github.com/Labs64/credit
 5. Custom Image Caption Shortcode to reflect Credit Information
 
 == Changelog ==
+
+= 0.9.12 =
+* Add custom sizes at the credit table
+* Adapt NetLicensing authentication using apiKey
 
 = 0.9.11 =
 * German translation by Michail Preissnerov
