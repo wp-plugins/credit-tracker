@@ -3,7 +3,7 @@ Contributors: labs64
 Tags: credit, attribution, legal, copyright, owner, author, media library, media, image, photo, license, royalty-free, RF, Creative Commons, stock, attachment, flickr, fotolia, bildnachweis, impressum, imprint, microdata, NetLicensing
 Requires at least: 3.5.1
 Tested up to: 3.9
-Stable tag: 0.9.13
+Stable tag: 0.9.14
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -130,7 +130,10 @@ Yes you can! Join in on our [GitHub repository](https://github.com/Labs64/credit
 
 == Changelog ==
 
-= 0.9.13 =
+= 0.9.14 =
+* Fixed [bug](http://wordpress.org/support/topic/error-after-updating-to-0913) introduced with v0.9.13
+
+= 0.9.13 (not-stable) =
 * Test and approve plugin for WordPress 3.9
 * Enable Flickr
 
