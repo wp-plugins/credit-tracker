@@ -6,7 +6,7 @@
  * Description: A simple way to show credits for the images used on your website.
  * Author:      Labs64
  * Author URI:  http://www.labs64.com
- * Version:     0.9.15
+ * Version:     0.9.16
  * Text Domain: credit-tracker
  * Domain Path: /languages
  * License:     GPL-2.0+
@@ -30,7 +30,7 @@ if (!defined('WPINC')) {
 /**
  * Plugin version, used for cache-busting of style and script file references.
  */
-define('CT_VERSION', '0.9.15');
+define('CT_VERSION', '0.9.16');
 
 /**
  * Unique identifier for your plugin.
@@ -55,6 +55,7 @@ require_once(plugin_dir_path(__FILE__) . '/php/parser/fotolia.php');
 require_once(plugin_dir_path(__FILE__) . '/php/parser/istockphoto.php');
 require_once(plugin_dir_path(__FILE__) . '/php/parser/pixelio.php');
 require_once(plugin_dir_path(__FILE__) . '/php/parser/flickr.php');
+require_once(plugin_dir_path(__FILE__) . '/php/parser/freeimages.php');
 
 // Register hooks that are fired when the plugin is activated, deactivated, and uninstalled, respectively.
 register_activation_hook(__FILE__, array('Credit_Tracker', 'activate'));

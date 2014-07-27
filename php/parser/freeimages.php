@@ -1,17 +1,17 @@
 <?php
 
 /**
- * Pixelio parser
+ * Freeimages parser
  *
  * @package parser
  * @author Labs64 <info@labs64.com>
  **/
-class Pixelio extends Parser
+class Freeimages extends Parser
 {
 
-    const COPYRIGHT = '&copy; %author% / <a href="http://www.pixelio.de" target="_blank">PIXELIO</a>';
+    const COPYRIGHT = '&copy; %author% / <a href="http://www.freeimages.com" target="_blank">freeimages.com</a>';
 
-    const BASE_URL = 'http://www.pixelio.de/media/';
+    const BASE_URL = 'http://www.freeimages.com/photo/';
 
     function __construct()
     {
@@ -23,8 +23,8 @@ class Pixelio extends Parser
         $url = self::BASE_URL . $number;
 
         $item = parent::parse($number);
-        $item['source'] = 'Pixelio';
-        $item['publisher'] = 'Pixelio';
+        $item['source'] = 'Freeimages';
+        $item['publisher'] = 'Freeimages';
         $item['license'] = 'Royalty-free';
         $item['link'] = $url;
 
@@ -33,7 +33,7 @@ class Pixelio extends Parser
         if ($html) {
             $xpath = new DOMXPath($doc);
 
-            $tags = $xpath->query("//tr/td[contains(., 'Fotograf:')]/following::td[1]/a");
+            $tags = $xpath->query("//tr/td[contains(., 'Uploaded by')]/a");
             if (!is_null($tags) && $tags->length > 0) {
                 $item['author'] = $tags->item(0)->textContent;
             }
