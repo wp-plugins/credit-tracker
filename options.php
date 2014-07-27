@@ -250,6 +250,29 @@ function print_reference_section()
         <tbody>
         <tr valign="top">
             <th scope="row">
+                [caption]
+            </th>
+            <td>
+                <p>Override WordPress [caption] shortcode.</p>
+
+                <p>Attributes:</p>
+
+                <p>&nbsp;&nbsp;<strong>text</strong> <i>(optional)</i> - custom attribute to override standard media caption. The
+                    default behavior, if not specified standard media caption will be used.</p>
+
+                <p><strong>Examples:</strong></p>
+
+                <p><code>[caption]...[/caption]</code></p>
+
+                <p>Override [caption] shortcode</p>
+
+                <p><code>[caption text="image caption"]...[/caption]</code></p>
+
+                <p>Override [caption] shortcode and use <i>text</i> instead of the standard media property</p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <th scope="row">
                 [credit_tracker_table]
             </th>
             <td>
@@ -592,6 +615,11 @@ function ct_get_sources_array()
             'caption' => 'Flickr',
             'copyright' => 'get_flickr_copyright',
             'retriever' => 'get_flickr_metadata'
+        ),
+        'freeimages' => array(
+            'caption' => 'Freeimages',
+            'copyright' => 'get_freeimages_copyright',
+            'retriever' => 'get_freeimages_metadata'
         )
     );
     return $sources;
@@ -728,6 +756,23 @@ function get_flickr_copyright()
 function get_flickr_metadata($number)
 {
     $parser = new Flickr(get_single_option('ct_auth_flickr_apikey'));
+    return $parser->execute($number);
+}
+
+/**
+ * Freeimages: copyright
+ */
+function get_freeimages_copyright()
+{
+    return Freeimages::COPYRIGHT;
+}
+
+/**
+ * Freeimages: metadata
+ */
+function get_freeimages_metadata($number)
+{
+    $parser = new Freeimages();
     return $parser->execute($number);
 }
 
