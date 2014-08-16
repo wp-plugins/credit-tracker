@@ -6,7 +6,7 @@
  * @package parser
  * @author Labs64 <info@labs64.com>
  **/
-class Flickr extends Parser
+class CTFlickr extends CTParser
 {
 
     const COPYRIGHT = '&copy; %author% - Flickr.com';
@@ -36,8 +36,11 @@ class Flickr extends Parser
             $username = $photosGetInfo_resp['photo']['owner']['username'];
             $item['author'] = (empty($realname)) ? $username : $realname;
 
-            // TODO: parse photo.urls.url
+            // parse photo.urls.url
             $item['link'] = '';
+            if (!empty($photosGetInfo_resp['photo']['urls']['url'])) {
+                $item['link'] = $photosGetInfo_resp['photo']['urls']['url'][0]['_content'];
+            }
 
             $license_id = $photosGetInfo_resp['photo']['license'];
             $photosLicensesGetInfo_resp = $this->photosLicensesGetInfo();
