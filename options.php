@@ -74,10 +74,10 @@ function ct_enqueue_admin_styles()
     }
 
     $screen = get_current_screen();
-    if ($screen->id == $plugin_screen_hook_suffix) {
+    $ct_allowed_screens = array($plugin_screen_hook_suffix, "attachment", "upload");
+    if (isset($screen) && in_array($screen->id, $ct_allowed_screens)) {
         wp_enqueue_style(CT_SLUG . '-admin-styles', plugins_url('css/ct-admin.css', __FILE__), array(), CT_VERSION);
     }
-
 }
 
 /**
@@ -94,10 +94,10 @@ function ct_enqueue_admin_scripts()
     }
 
     $screen = get_current_screen();
-    if (in_array($screen->id, [$plugin_screen_hook_suffix, 'attachment', 'upload'])) {
+    $ct_allowed_screens = array($plugin_screen_hook_suffix, "attachment", "upload");
+    if (isset($screen) && in_array($screen->id, $ct_allowed_screens)) {
         wp_enqueue_script(CT_SLUG . '-admin-script', plugins_url('js/ct-admin.js', __FILE__), array('jquery'), CT_VERSION);
     }
-
 }
 
 /**
@@ -257,7 +257,8 @@ function ct_print_reference_section()
 
                 <p>Attributes:</p>
 
-                <p>&nbsp;&nbsp;<strong>text</strong> <i>(optional)</i> - custom attribute to override standard media caption. The
+                <p>&nbsp;&nbsp;<strong>text</strong> <i>(optional)</i> - custom attribute to override standard media
+                    caption. The
                     default behavior, if not specified standard media caption will be used.</p>
 
                 <p><strong>Examples:</strong></p>
@@ -284,7 +285,8 @@ function ct_print_reference_section()
                     default behavior, if no ID is specified, is to display all images containing author info.</p>
 
                 <p>&nbsp;&nbsp;<strong>size</strong> <i>(optional)</i> - specify the image size to use for the thumbnail
-                    display. Valid values include "thumbnail", "medium", "large", "full" or numeric values (e.g. "50" or "100x50").
+                    display. Valid values include "thumbnail", "medium", "large", "full" or numeric values (e.g. "50" or
+                    "100x50").
                     The default value is "thumbnail".</p>
 
                 <p>&nbsp;&nbsp;<strong>style</strong> <i>(optional)</i> - specify the table CSS style. Valid values
@@ -386,7 +388,9 @@ function ct_sanitize($input)
         $input['ct_copyright_format'] = $input['ct_copyright_format'];
     }
 
-    $input['ct_auth_flickr_apikey'] = sanitize_text_field($input['ct_auth_flickr_apikey']);
+    if (isset($input['ct_auth_flickr_apikey'])) {
+        $input['ct_auth_flickr_apikey'] = sanitize_text_field($input['ct_auth_flickr_apikey']);
+    }
 
     return $input;
 }
