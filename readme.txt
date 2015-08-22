@@ -96,7 +96,7 @@ If you want to show the Credit Tracker on a specific page or set of pages on you
 
 This is a brief introductory video for Credit Tracker:
 
-[youtube https://youtu.be/w13fYXWK-lo]
+[youtube http://www.youtube.com/watch?v=w13fYXWK-lo]
 
 = How do I use both standard caption and media credit? =
 
