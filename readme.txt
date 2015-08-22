@@ -2,8 +2,8 @@
 Contributors: labs64
 Tags: credit, attribution, legal, copyright, owner, author, media library, media, image, photo, license, royalty-free, RF, Creative Commons, stock, attachment, flickr, fotolia, bildnachweis, impressum, imprint, microdata, NetLicensing
 Requires at least: 3.5.1
-Tested up to: 4.2.2
-Stable tag: 1.1.3
+Tested up to: 4.3
+Stable tag: 1.1.4
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,10 @@ If you want to show the Credit Tracker on a specific page or set of pages on you
 * **size** *(optional)* - specify the image size to use for the thumbnail display within the credit tracker table. The choice of sizes includes "thumbnail", "medium", "large", "full" or numeric values (e.g. "50" or "100x50"). The default value is "thumbnail".
 * **style** *(optional)* - Specify the table style to suite your website. Valid values include "default", "mercury", "mars". If no value is set, the "default" style will be used.
 
+This is a brief introductory video for Credit Tracker:
+
+[youtube https://youtu.be/w13fYXWK-lo]
+
 = How do I use both standard caption and media credit? =
 
 By using an overridden version of the caption shortcode, you have also access to the standard media attributes 'title' and 'caption'. So you can simply add these to the 'Copyright format' definition, e.g.:
@@ -137,6 +141,10 @@ Yes you can! Join in on our [GitHub repository](https://github.com/Labs64/credit
 5. Custom Image Caption Shortcode to reflect Credit Information
 
 == Changelog ==
+
+= 1.1.4 =
+* Adapt, test and approve plugin for WordPress 4.3
+* Update Labs64 NetLicensing URL - [netlicensing.io](http://netlicensing.io)
 
 = 1.1.3 =
 * Restore old plugin options
