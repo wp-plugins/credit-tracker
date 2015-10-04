@@ -3,7 +3,7 @@ Contributors: labs64
 Tags: credit, attribution, legal, copyright, owner, author, media library, media, image, photo, license, royalty-free, RF, Creative Commons, stock, attachment, flickr, fotolia, bildnachweis, impressum, imprint, microdata, NetLicensing
 Requires at least: 3.5.1
 Tested up to: 4.3
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -142,6 +142,9 @@ Yes you can! Join in on our [GitHub repository](https://github.com/Labs64/credit
 
 == Changelog ==
 
+= 1.1.5 =
+* Fix CSS
+
 = 1.1.4 =
 * Adapt, test and approve plugin for WordPress 4.3
 * Update Labs64 NetLicensing URL - [netlicensing.io](http://netlicensing.io)
@@ -259,3 +262,9 @@ Listed here are credits and special thanks to some of you who have helped us out
 * German - by Michail Preissnerov
 
 *NOTE:* Please [contribute](https://github.com/Labs64/credit-tracker/tree/master/languages "contribute your language") your language to the plugin to make it even more useful.
+
+= Legal & Law-Related Decisions =
+
+This is a collection of legal & law regulations and judicial decisions where Credit Tracker may be very useful in order to prevent financial damages for the publishers.
+
+* [Germany] Judicial Decision: Urteil des Amtsgerichts München vom 24.06.15, Aktenzeichen [142 C 11428/15](https://www.justiz.bayern.de/gericht/ag/m/presse/archiv/2015/04984/ "142 C 11428/15")
