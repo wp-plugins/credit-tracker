@@ -1,0 +1,217 @@
+# Copyright (C) 2013 Labs64
+# This file is distributed under the same license as the Credit_Tracker package.
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.1.3\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/credit-tracker\n"
+"POT-Creation-Date: 2015-07-13 00:48+0200\n"
+"PO-Revision-Date: 2015-07-13 00:48+0200\n"
+"Last-Translator: Labs64 <info@labs64.com>\n"
+"Language-Team: Labs64 <info@labs64.com >\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;esc_html_e;esc_html__;esc_attr_e;"
+"esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: credit-tracker-class.php:195 credit-tracker-class.php:300
+#: credit-tracker-shortcodes.php:20
+msgid "Ident-Nr."
+msgstr "Id-Nr."
+
+#: credit-tracker-class.php:198
+msgid "The original object number at the source"
+msgstr "Original Objekt-Nummer"
+
+#: credit-tracker-class.php:206
+msgid "activate"
+msgstr "aktivieren"
+
+#: credit-tracker-class.php:213
+msgid "GET MEDIA DATA"
+msgstr "MEDIADATEN HOLEN"
+
+#: credit-tracker-class.php:219 credit-tracker-class.php:301
+msgid "Source"
+msgstr "Quelle"
+
+#: credit-tracker-class.php:223
+msgid "Source where to locate the original media"
+msgstr "Quelle der originalen Medien-Datei"
+
+#: credit-tracker-class.php:227 credit-tracker-class.php:302
+#: credit-tracker-shortcodes.php:21
+msgid "Author"
+msgstr "Autor"
+
+#: credit-tracker-class.php:230
+msgid "Media author/owner"
+msgstr "Medien-Autor/Eigentümer"
+
+#: credit-tracker-class.php:234 credit-tracker-shortcodes.php:22
+msgid "Publisher"
+msgstr "Verleger"
+
+#: credit-tracker-class.php:237
+msgid "Media publisher (e.g. image agency)"
+msgstr "Medium-Herausgeber ( z.B. Bilder-Agentur )"
+
+#: credit-tracker-class.php:241 credit-tracker-shortcodes.php:24
+msgid "License"
+msgstr "Lizenz"
+
+#: credit-tracker-class.php:244
+msgid "Media license"
+msgstr "Medien-Lizenz"
+
+#: credit-tracker-class.php:248
+msgid "Link"
+msgstr "Link"
+
+#: credit-tracker-class.php:251
+msgid "Media link"
+msgstr "Medien-Link"
+
+#: credit-tracker-shortcodes.php:23
+#, fuzzy
+msgid "Copyright"
+msgstr "Copyright"
+
+#: credit-tracker-shortcodes.php:66
+msgid "No images found"
+msgstr "keine Bilder gefunden"
+
+#: options.php:42
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: options.php:55 options.php:56
+msgid "Credit Tracker"
+msgstr "Credit Tracker"
+
+#: options.php:112
+msgid "Credit Tracker by Labs64"
+msgstr "Credit Tracker by Labs64"
+
+#: options.php:172
+msgid "Some Image Data Retriever needs additional configuration"
+msgstr ""
+
+#: options.php:181
+msgid "Image data retriever (Free)"
+msgstr "Image data retriever (Frei)"
+
+#: options.php:207
+msgid "Features"
+msgstr "Merkmale"
+
+#: options.php:208
+msgid "Available plugin features"
+msgstr "Verfügbare Plugin Merkmale"
+
+#: options.php:212
+msgid "Validate"
+msgstr "Validieren"
+
+#: options.php:227
+msgid "Feedback"
+msgstr "Feedback"
+
+#: options.php:229
+msgid ""
+"Did you find a bug? Have an idea for a plugin? Please help us improve this "
+"plugin"
+msgstr ""
+"Haben Sie einen Fehler gefunden, oder eine Idee für ein Plugin? Helfen Sie "
+"uns bitte bei der Verbesserung."
+
+#: options.php:233
+msgid "Report a bug, or suggest an improvement"
+msgstr "Melden Sie einen Fehler, oder schlagen Sie eine Verbesserung vor"
+
+#: options.php:235
+msgid "Like us on Facebook"
+msgstr "Empfehle uns auf Facebook"
+
+#: options.php:237
+msgid "Read Labs64 Blog"
+msgstr "Labs64 Blog lesen"
+
+#: options.php:248
+msgid "Shortcodes Reference"
+msgstr "Shortcodes Referenz"
+
+#: options.php:343
+msgid "Credit Tracker Settings"
+msgstr "Credit Tracker Einstellungen"
+
+#: options.php:350
+msgid "Retriever Settings"
+msgstr "Retriever Einstellungen"
+
+#: options.php:357
+msgid "Copyright format"
+msgstr "Copyright Format"
+
+#: options.php:363
+msgid ""
+"Default copyright format (HTML allowed)<br/>Allowed placeholders: %ident_nr%, "
+"%source%, %author%, %publisher%, %license%, %link%<br/>...as well as standard "
+"attributes: %title%, %caption%"
+msgstr ""
+
+#: options.php:369
+msgid "Override shortcodes"
+msgstr "Shortcodes überladen"
+
+#: options.php:375
+msgid "Override WordPress [caption] shortcode"
+msgstr "WordPress Shortcode [caption] überladen"
+
+#: options.php:376
+msgid ""
+"Replaces output of standard WordPress [caption] shortcode with improved "
+"version (add Image Microdata and Image Credit)"
+msgstr ""
+"Ersetzt Ausgabe von standard WordPress Shortcode [caption] mit verbesserter "
+"Version (Bild Microdata und Urheberinfo)"
+
+#: options.php:382
+msgid "Flickr api_key"
+msgstr "Flickr api_key"
+
+#: options.php:388
+msgid ""
+"To use the Flickr data retriever you need to have an Flickr API application "
+"key. <a href=\"https://www.flickr.com/services/api/misc.api_keys.html\" "
+"target=\"_blank\">See here</a> for more details."
+msgstr ""
+
+#: options.php:601
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
+#, fuzzy
+#~ msgid "ident_nr"
+#~ msgstr "Id-Nr."
+
+#, fuzzy
+#~ msgid "author"
+#~ msgstr "Autor"
+
+#, fuzzy
+#~ msgid "publisher"
+#~ msgstr "Verleger"
+
+#, fuzzy
+#~ msgid "license"
+#~ msgstr "Lizenz"
+
+#~ msgid "Enter your settings below:"
+#~ msgstr "Geben Sie Ihre Einstellungen unten ein:"
